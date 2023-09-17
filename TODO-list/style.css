@@ -1,0 +1,123 @@
+* {
+    /* определяет внешний отступ на всех четырёх сторонах элемента */
+    margin: 0;
+    /* устанавливает внутренние отступы/поля со всех сторон элемента */
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+.wrapper {
+    /* делает все дочерние элементы резиновыми — flex , а не инлайновыми или блочными, как было изначально */
+    display: flex;
+    /* выравнивает flex-элементы текущей flex-линии таким же образом, как и justify-content , но в перпендикулярном направлении */
+    align-items: center;
+    /* определяет, как браузер распределяет пространство между и вокруг элементов контента вдоль главной оси flex контейнера, или вдоль строчной оси grid контейнера */
+    justify-content: center;
+    /* задают размер относительно размеров окна браузера (viewport), то есть видимой части документа. */
+    height: 100vh;
+}
+
+.container {
+    /* ширина */
+    width: 634px;
+    /* высота */
+    height: 500px;
+    /* внутрений отступ */
+    padding: 40px;
+    /* радиус скругления */
+    border-radius: 15px;
+    /* цвет */
+    background-color: #E6E6E6;
+    /* Грид-раскладка (CSS Grid Layout) представляет собой двумерную систему сеток */
+    display: grid;
+    /* определяет имена линий и размеры полос грид-рядов  */
+    grid-template-rows: auto 1fr;
+    /* задаёт отступы (en-US) между колонками и рядами */
+    gap: 30px;
+}
+
+.add_block {
+    display: grid;
+    /* ширина эдементов */
+    grid-template-columns: 1fr 0.4fr;
+    /* высота */
+    height: 65px;
+}
+
+.add_block-input {
+    /* цвет */
+    background: #FFFFFF;
+    /* закруглеие краев */
+    border-radius: 10px 0 0 10px;
+    /* убрать обводку */
+    border: none;
+    /* размер текста */
+    font-size: 18px;
+    /* отступы (сверху - слева) */
+    padding: 0 20px;
+}
+
+.add_block-btn {
+    /* цвет */
+    background: #FBCC28;
+    /* закругление краев */
+    border-radius: 0 10px 10px 0;
+    /* убрать обводку */
+    border: none;
+    /* размер текста */
+    font-size: 18px;
+}
+
+/* псевдокласс для изменения курсора и цвета кнопки */
+.add_block-btn:hover {
+    cursor: pointer;
+    background: #f2ca39;
+}
+
+.todo-field {
+    background: #FFFFFF;
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    /* указывающее на то, как flex-элементы располагаются во flex-контейнере по главной оси и направлению (normal или reversed) */
+    /* Направление, в котором блоки будут располагаться вертикально */
+    flex-direction: column;
+}
+
+.todo-field__item {
+    background: #FFEBEB;
+    border-radius: 10px;
+    padding: 30px 20px;
+    margin: 10px;
+    display: grid;
+    font-size: 18px;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 20px;
+}
+
+.todo-field__item_done {
+    background: #EBFFED;
+}
+
+.todo-field__item_done .todo-field__item-text {
+    /* модуль CSS, который определяет возможности, относящиеся к оформлению текста, такие как подчёркивание, тень текста и метки выделения */
+    text-decoration: line-through;
+}
+
+.todo-field__item-input {
+    /* Функция трансформации (увеличение в 2 раза) */
+    transform: scale(2);
+}
+
+.todo-field__item-input:hover {
+    cursor: pointer;
+}
+
+
+.todo-field__item-img:hover {
+    cursor: pointer;
+}
