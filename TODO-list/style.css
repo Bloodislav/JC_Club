@@ -21,12 +21,14 @@ body {
 }
 
 .container {
+    margin: 0 auto;
+    margin-top: 150px;
     /* ширина */
     width: 634px;
     /* высота */
-    height: 500px;
+    height: 797px;
     /* внутрений отступ */
-    padding: 40px;
+    padding: 60px;
     /* радиус скругления */
     border-radius: 15px;
     /* цвет */
@@ -85,6 +87,9 @@ body {
     /* указывающее на то, как flex-элементы располагаются во flex-контейнере по главной оси и направлению (normal или reversed) */
     /* Направление, в котором блоки будут располагаться вертикально */
     flex-direction: column;
+
+    /* Для обработки переполнения */
+    overflow: auto;
 }
 
 .todo-field__item {
@@ -101,6 +106,14 @@ body {
 
 .todo-field__item_done {
     background: #EBFFED;
+    border-radius: 10px;
+    padding: 30px 20px;
+    margin: 10px;
+    font-size: 18px;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 20px;
 }
 
 .todo-field__item_done .todo-field__item-text {
