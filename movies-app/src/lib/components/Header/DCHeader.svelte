@@ -9,6 +9,7 @@
 <style>
     .header{
         background: url('/images/header-bg.png') no-repeat center;
+        background-size: cover;
         height: 600px;
     }
 </style>
