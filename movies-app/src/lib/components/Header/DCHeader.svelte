@@ -1,10 +1,14 @@
+<script>
+	import DcNavbar from "./DCNavbar.svelte";
+
+</script>
 <header class="header">
-    1
+    <DcNavbar/>
 </header>
 
 <style>
     .header{
-        background: url('/Images/header-bg.png') no-repeat center;
+        background: url('/images/header-bg.png') no-repeat center;
         height: 600px;
     }
 </style>

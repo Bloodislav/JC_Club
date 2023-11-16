@@ -1,0 +1,1 @@
+<footer class="dcfooter">Footer</footer>
